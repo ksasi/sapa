@@ -1,0 +1,13 @@
+wget --no-check-certificate https://mm.kaist.ac.kr/datasets/voxceleb/data/vox1_dev_txt.zip
+wget --no-check-certificate https://mm.kaist.ac.kr/datasets/voxceleb/data/vox1_test_txt.zip
+wget --no-check-certificate https://mm.kaist.ac.kr/datasets/voxceleb/meta/list_test_hard.txt
+
+# VoxCeleb1 Audio Files , obtained after requesting data from the website by submitting the form
+wget --no-check-certificate 'https://cn01.mmai.io/download/voxceleb?key=07f88e7b40daff6cb64e7036e3ad411853b9a3a0fc07ddb6da787a01457182eb96ee1fafe9e7b8a3c127f01a638e08138efbd40557766f7d206e7ed5e962cfecc8a1014f2a6baece31468dfd1b88329abbbdcb4bde5aa842a81b0d8a20a4b049110a8204d667d5884602cf66c3c2b77e8b524c3ea1fdcbc182fea346105e6d3b&file=vox1_dev_wav_partaa' --output-document=vox1_dev_wav_partaa
+wget --no-check-certificate 'https://cn01.mmai.io/download/voxceleb?key=07f88e7b40daff6cb64e7036e3ad411853b9a3a0fc07ddb6da787a01457182eb96ee1fafe9e7b8a3c127f01a638e08138efbd40557766f7d206e7ed5e962cfecc8a1014f2a6baece31468dfd1b88329abbbdcb4bde5aa842a81b0d8a20a4b049110a8204d667d5884602cf66c3c2b77e8b524c3ea1fdcbc182fea346105e6d3b&file=vox1_dev_wav_partab' --output-document=vox1_dev_wav_partab
+wget --no-check-certificate 'https://cn01.mmai.io/download/voxceleb?key=07f88e7b40daff6cb64e7036e3ad411853b9a3a0fc07ddb6da787a01457182eb96ee1fafe9e7b8a3c127f01a638e08138efbd40557766f7d206e7ed5e962cfecc8a1014f2a6baece31468dfd1b88329abbbdcb4bde5aa842a81b0d8a20a4b049110a8204d667d5884602cf66c3c2b77e8b524c3ea1fdcbc182fea346105e6d3b&file=vox1_dev_wav_partac' --output-document=vox1_dev_wav_partac
+wget --no-check-certificate 'https://cn01.mmai.io/download/voxceleb?key=07f88e7b40daff6cb64e7036e3ad411853b9a3a0fc07ddb6da787a01457182eb96ee1fafe9e7b8a3c127f01a638e08138efbd40557766f7d206e7ed5e962cfecc8a1014f2a6baece31468dfd1b88329abbbdcb4bde5aa842a81b0d8a20a4b049110a8204d667d5884602cf66c3c2b77e8b524c3ea1fdcbc182fea346105e6d3b&file=vox1_dev_wav_partad' --output-document=vox1_dev_wav_partad
+wget --no-check-certificate 'https://cn01.mmai.io/download/voxceleb?key=07f88e7b40daff6cb64e7036e3ad411853b9a3a0fc07ddb6da787a01457182eb96ee1fafe9e7b8a3c127f01a638e08138efbd40557766f7d206e7ed5e962cfecc8a1014f2a6baece31468dfd1b88329abbbdcb4bde5aa842a81b0d8a20a4b049110a8204d667d5884602cf66c3c2b77e8b524c3ea1fdcbc182fea346105e6d3b&file=vox1_test_wav.zip' --output-document=vox1_test_wav.zip
+
+# Download all parts and concatenate the files using the command cat vox1_dev* > vox1_dev_wav.zip.
+cat vox1_dev* > vox1_dev_wav.zip
