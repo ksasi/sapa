@@ -1,0 +1,5 @@
+/home/ubuntu/sapa/Speaker_Verification/eval_WavLM.py:32: ParserWarning: Falling back to the 'python' engine because the 'c' engine does not support sep=None with delim_whitespace=False; you can avoid this warning by specifying engine='python'.
+  self.df = pd.read_csv(file_path, sep=None, header=None, names=['label', 'audio1', 'audio2'])
+/opt/conda/envs/pytorch/lib/python3.9/site-packages/torch/nn/functional.py:4999: UserWarning: Support for mismatched key_padding_mask and attn_mask is deprecated. Use same type for both instead.
+  warnings.warn(
+EER for WavLM-Base  model after fine-tuning on Kathbath Telugu Valid dataset : 0.23368251410251537

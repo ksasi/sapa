@@ -1,0 +1,7 @@
+Type of mixture : mix_clean (utterances only) :
+Libri2Mix 8k sample rate and mode is min (the mixture ends when the shortest source ends) :
+Scale-invariant signal-to-noise ratio improvement (SISNRi) on Test partition : -12.34652051375972
+Signal-to-distortion ratio improvement (SDRi) on Test partition : -3.1446831536582773
+Libri2Mix 8k sample rate and mode is max (the mixtures ends with the longest source) :
+Scale-invariant signal-to-noise ratio improvement (SISNRi) on Test partition : -12.253356387226118
+Signal-to-distortion ratio improvement (SDRi) on Test partition : -3.6753079593678315

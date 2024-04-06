@@ -1,0 +1,25 @@
+/home/ubuntu/sapa/Speaker_Verification/train_WavLM.py:23: ParserWarning: Falling back to the 'python' engine because the 'c' engine does not support sep=None with delim_whitespace=False; you can avoid this warning by specifying engine='python'.
+  self.df = pd.read_csv(file_path, sep=None, header=None, names=['label', 'audio1', 'audio2'])
+/home/ubuntu/sapa/Speaker_Verification/train_WavLM.py:23: ParserWarning: Falling back to the 'python' engine because the 'c' engine does not support sep=None with delim_whitespace=False; you can avoid this warning by specifying engine='python'.
+  self.df = pd.read_csv(file_path, sep=None, header=None, names=['label', 'audio1', 'audio2'])
+Loss during training at epoch 0 : 4.693744659423828
+Test Loss at epoch 0 : 2.954996109008789
+Loss during training at epoch 1 : 1.94875168800354
+Test Loss at epoch 1 : 4.702230453491211
+Loss during training at epoch 2 : 1.5186676979064941
+Test Loss at epoch 2 : 2.6779003143310547
+Loss during training at epoch 3 : 1.1125022172927856
+Test Loss at epoch 3 : 3.6652753353118896
+Loss during training at epoch 4 : 0.9657094478607178
+Test Loss at epoch 4 : 4.3982834815979
+Loss during training at epoch 5 : 0.6223933696746826
+Test Loss at epoch 5 : 3.5987443923950195
+Loss during training at epoch 6 : 0.544405460357666
+Test Loss at epoch 6 : 3.7502713203430176
+Loss during training at epoch 7 : 0.42783835530281067
+Test Loss at epoch 7 : 3.273317575454712
+Loss during training at epoch 8 : 0.3268057107925415
+Test Loss at epoch 8 : 3.1863064765930176
+Loss during training at epoch 9 : 0.2866114377975464
+Test Loss at epoch 9 : 2.8990843296051025
+Model training Completed (5000 samples)
