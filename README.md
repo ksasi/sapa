@@ -128,6 +128,11 @@ Execute the below steps to fine-tune and evaluate SepFormer :
 - Adopt the speechbrain [recipe](https://github.com/speechbrain/speechbrain/tree/develop/recipes/WSJ0Mix/separation)
 - Execute eval_separator.py after updating the model with fine-tuned model
 
+### Demo (Speaker Verification) :
+
+Demo of **Speaker Verification** from audio inputs can be executed by running `Speaker_Verification_Demo.ipynb` ipython notebook in the Demo folder
+
+![Demo1](demo.png)
 
 ### References
 
