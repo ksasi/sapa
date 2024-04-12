@@ -1,0 +1,4 @@
+Epoch loaded: 0 - test si-snr: -8.40e+00
+Epoch loaded: 0 - test si-snr: -8.42e+00
+Epoch loaded: 50 - test si-snr: -1.29e+01
+Epoch loaded: 50 - test si-snr: -1.34e+01
