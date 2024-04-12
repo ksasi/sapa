@@ -8,6 +8,7 @@ from speechbrain.dataio.dataio import read_audio
 from speechbrain.dataio.batch import PaddedBatch
 import pandas as pd
 import numpy as np
+import torch
 
 
 class source_mix_dataset(Dataset):
@@ -36,7 +37,8 @@ def collate_fn(data):
 def eval(model, file_path):
     audio_dataset = source_mix_dataset(file_path)
     
-    train_audio_set, test_audio_set = random_split(audio_dataset, [0.7, 0.3])
+    generator = torch.Generator().manual_seed(42)
+    train_audio_set, test_audio_set = random_split(audio_dataset, [0.7, 0.3], generator=generator)
 
     test_audio_loader = DataLoader(test_audio_set, collate_fn=collate_fn, batch_size=8)
     #test_audio_loader = DataLoader(test_audio_set, batch_size=1)
