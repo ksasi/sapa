@@ -65,7 +65,7 @@ Execute the below script to evaluate models (XLSR-Wav2Vec2, UniSpeech-SAT and Wa
 
 > cd Speaker_Verification
 > 
-> nohup python eval_voxceleb.py > <root_path>/log/eval_log_voxceleb.out &
+> nohup python eval_voxceleb.py > \<root\_path\>/log/eval_log_voxceleb.out &
 > 
 
 ### Models Evaluation (Kathbath - Telugu) :
@@ -74,7 +74,7 @@ Execute the below script to evaluate models (XLSR-Wav2Vec2, UniSpeech-SAT and Wa
 
 > cd Speaker_Verification
 > 
-> nohup python eval_kathbath.py > <root_path>/log/eval_log_kathbath.out &
+> nohup python eval_kathbath.py > \<root\_path\>/log/eval_log_kathbath.out &
 > 
 
 ### Fine-tune and evaluate WavLM model :
@@ -83,14 +83,14 @@ Execute the below script to fine-tune WavLM model on **valid partition** of Kath
 
 > cd Speaker_Verification
 > 
-> nohup python train_WavLM.py > <root_path>/log/WavLM_log_finetune.out &
+> nohup python train_WavLM.py > \<root\_path\>/log/WavLM_log_finetune.out &
 > 
 
 Execute the below script to evaluate the fin-tuned WavLM mode on **test partition** of Kathbath - Telugu dataset
 
 > cd Speaker_Verification
 > 
-> nohup python eval_WavLM.py > <root_path>/log/WavLM_log_ft_eval.out &
+> nohup python eval_WavLM.py > \<root\_path\>/log/WavLM_log_ft_eval.out &
 > 
 
 ## Source Separation
@@ -119,14 +119,37 @@ Execute the below script to perform evaluation of SepFormer on test split of (70
 
 > cd Source_Separation
 > 
-> nohup python eval_separator.py > <root_path>/log/eval_sepformer_librimix_batch_size8.out &
+> nohup python eval_separator.py > \<root\_path\>/log/eval_sepformer_librimix_batch_size8.out &
 
 ### Model(SepFormer) fine-tuning and Evaluation
 
 Execute the below steps to fine-tune and evaluate SepFormer :
 
-- Adopt the speechbrain [recipe](https://github.com/speechbrain/speechbrain/tree/develop/recipes/WSJ0Mix/separation)
-- Execute eval_separator.py after updating the model with fine-tuned model
+- Adopt the speechbrain [recipe](https://github.com/speechbrain/speechbrain/tree/develop/recipes/WSJ0Mix/separation) and fine-tune as below:
+
+- Generate train and test csv files by executing `csv_generator.py` as below :
+>
+> cd Source_Separation
+> 
+> python csv_generator.py
+> 
+
+
+- Clone `speechbrain` repo and update `train.py` , `sepformer.yaml` as below:
+>
+> git clone https://github.com/speechbrain/speechbrain.git
+> 
+> cp \<root\_path\>/Source_Separation/train.py \<root\_path\>/Source_Separation/speechbrain/recipes/WSJ0Mix/separation/train.py
+> 
+> cp \<root\_path\>/Source_Separation/sepformer.yaml \<root\_path\>/Source_Separation/speechbrain/recipes/WSJ0Mix/separation/hparams/sepformer.yaml
+> 
+
+- Fine-tune sepformer with LibriMix dataset by running `train.py` as below:
+>
+> cd \<root\_pat>/Source_Separation
+> 
+> nohup \<root\_path\>/Source_Separation/speechbrain/recipes/WSJ0Mix/separation/train.py \<root\_path\>/Source_Separation/speechbrain/recipes/WSJ0Mix/separation/hparams/sepformer.yaml > \<root\_path\>/log/sepformer_ft.out &
+
 
 ### Demo (Speaker Verification) :
 
